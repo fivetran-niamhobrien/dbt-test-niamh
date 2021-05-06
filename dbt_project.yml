@@ -2,17 +2,17 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'jaffle_shop'
+name: 'tsm_emea_dbt_ads'
 version: '1.0.0'
 config-version: 2
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'jaffle_shop'
+profile: 'tsm_emea_dbt_ads'
 
 # These configurations specify where dbt should look for different types of files.
 # The `source-paths` config, for example, states that models in this project can be
 # found in the "models/" directory. You probably won't need to change these!
-source-paths: ["models"]
+source-paths: ["dbt_modules/ad_reporting/models"]
 analysis-paths: ["analysis"]
 test-paths: ["tests"]
 data-paths: ["data"]
@@ -27,10 +27,43 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
-
 # In this example config, we tell dbt to build all models in the example/ directory
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
-models:
-  jaffle_shop:
-    +materialized: table
+models:  
+  pinterest:
+    +schema: pinterest
+  pinterest_source:
+    +schema: pinterest_source
+
+  microsoft_ads:
+    +schema: microsoft_ads
+  microsoft_ads_source:
+    +schema: microsoft_ads_source
+
+  linkedin:
+    +schema: linkedin
+  linkedin_source:
+    +schema: linkedin_source
+
+  twitter_ads:
+    +schema: twitter_ads
+  twitter_ads_source:
+    +schema: twitter_ads_source
+
+  facebook_ads:
+    +schema: facebook_ads
+  facebook_ads_source:
+    +schema: facebook_ads_source
+  facebook_ads_creative_history:
+    +schema: facebook_ads
+
+  google_ads:
+    +schema: google_ads
+  google_ads_source:
+    +schema: google_ads_source
+
+  snapchat_ads:
+    +schema: snapchat_ads
+  snapchat_ads_source:
+    +schema: snapchat_ads_source
