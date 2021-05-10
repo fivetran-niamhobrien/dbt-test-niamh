@@ -6,16 +6,6 @@ name: 'tsm_emea_dbt_ads'
 version: '1.0.0'
 config-version: 2
 
-vars:
-  ad_reporting__pinterest_enabled: true
-  ad_reporting__microsoft_ads_enabled: false
-  ad_reporting__linkedin_ads_enabled: true
-  ad_reporting__google_ads_enabled: false
-  ad_reporting__twitter_ads_enabled: true
-  ad_reporting__facebook_ads_enabled: true
-  ad_reporting__snapchat_ads_enabled: false
-
-
 # This setting configures which "profile" dbt uses for this project.
 profile: 'tsm_emea_dbt_ads'
 
