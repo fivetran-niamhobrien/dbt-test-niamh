@@ -6,6 +6,9 @@ name: 'tsm_emea_dbt_ads'
 version: '1.0.0'
 config-version: 2
 
+vars:
+  ad_reporting__google_ads_enabled: False
+
 # This setting configures which "profile" dbt uses for this project.
 profile: 'tsm_emea_dbt_ads'
 
