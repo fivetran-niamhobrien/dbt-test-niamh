@@ -36,16 +36,6 @@ models:
   pinterest_source:
     +schema: pinterest_source
 
-  microsoft_ads:
-    +schema: microsoft_ads
-  microsoft_ads_source:
-    +schema: microsoft_ads_source
-
-  linkedin:
-    +schema: linkedin
-  linkedin_source:
-    +schema: linkedin_source
-
   twitter_ads:
     +schema: twitter_ads
   twitter_ads_source:
@@ -57,11 +47,6 @@ models:
     +schema: facebook_ads_source
   facebook_ads_creative_history:
     +schema: facebook_ads
-
-  google_ads:
-    +schema: google_ads
-  google_ads_source:
-    +schema: google_ads_source
 
   snapchat_ads:
     +schema: snapchat_ads
