@@ -7,11 +7,11 @@ require-dbt-version: [">=0.18.0", "<0.20.0"]
 vars:
   ad_reporting__pinterest_enabled: true
   ad_reporting__microsoft_ads_enabled: false
-  ad_reporting__linkedin_ads_enabled: true
+  ad_reporting__linkedin_ads_enabled: false
   ad_reporting__google_ads_enabled: false
   ad_reporting__twitter_ads_enabled: true
   ad_reporting__facebook_ads_enabled: true
-  ad_reporting__snapchat_ads_enabled: false
+  ad_reporting__snapchat_ads_enabled: true
 
 models:
   ad_reporting:
@@ -28,9 +28,9 @@ models:
     enabled: false
   
   linkedin:
-    enabled: true
+    enabled: false
   linkedin_source:
-    enabled: true
+    enabled: false
   
   twitter_ads:
     enabled: true
@@ -50,6 +50,6 @@ models:
     enabled: false
 
   snapchat_ads:
-    enabled: false
+    enabled: true
   snapchat_ads_source:
-    enabled: false
+    enabled: true
