@@ -6,9 +6,11 @@ config-version: 2
 require-dbt-version: [">=0.18.0", "<0.20.0"]
 
 models:
-  google_ads:
-    materialized: table
-
+ google_ads:
+    enabled: false
+  google_ads_source:
+    enabled: false
+    
 vars:
   google_ads:
     click_performance: "{{ ref('stg_google_ads__click_performance') }}"
