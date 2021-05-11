@@ -2,12 +2,62 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'jaffle_shop'
+name: 'tsm_emea_dbt_ads'
 version: '1.0.0'
 config-version: 2
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'jaffle_shop'
+profile: 'tsm_emea_dbt_ads'
+
+vars:
+  ad_reporting__pinterest_enabled: true
+  ad_reporting__microsoft_ads_enabled: false
+  ad_reporting__linkedin_ads_enabled: false
+  ad_reporting__google_ads_enabled: false
+  ad_reporting__twitter_ads_enabled: true
+  ad_reporting__facebook_ads_enabled: true
+  ad_reporting__snapchat_ads_enabled: true
+
+models:
+  ad_reporting:
+    +materialized: view
+  
+  pinterest:
+    enabled: true
+  pinterest_source:
+    enabled: true
+  
+  microsoft_ads:
+    enabled: false
+  microsoft_ads_source:
+    enabled: false
+  
+  linkedin:
+    enabled: false
+  linkedin_source:
+    enabled: false
+  
+  twitter_ads:
+    enabled: true
+  twitter_ads_source:
+    enabled: true
+  
+  facebook_ads:
+    enabled: true
+  facebook_ads_source:
+    enabled: true
+  facebook_ads_creative_history:
+    enabled: true
+  
+  google_ads:
+    enabled: false
+  google_ads_source:
+    enabled: false
+
+  snapchat_ads:
+    enabled: true
+  snapchat_ads_source:
+    enabled: true
 
 # These configurations specify where dbt should look for different types of files.
 # The `source-paths` config, for example, states that models in this project can be
@@ -32,5 +82,5 @@ clean-targets:         # directories to be removed by `dbt clean`
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
-  jaffle_shop:
+  tsm_emea_dbt_ads:
     +materialized: table
