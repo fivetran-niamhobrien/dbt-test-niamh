@@ -10,13 +10,9 @@ config-version: 2
 profile: 'tsm_emea_dbt_ads'
 
 vars:
-  ad_reporting__pinterest_enabled: true
   ad_reporting__microsoft_ads_enabled: false
   ad_reporting__linkedin_ads_enabled: false
   ad_reporting__google_ads_enabled: false
-  ad_reporting__twitter_ads_enabled: true
-  ad_reporting__facebook_ads_enabled: true
-  ad_reporting__snapchat_ads_enabled: true
 
 models:
   ad_reporting:
