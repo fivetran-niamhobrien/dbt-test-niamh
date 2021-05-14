@@ -13,6 +13,14 @@ vars:
   ad_reporting__microsoft_ads_enabled: false
   ad_reporting__linkedin_ads_enabled: false
   ad_reporting__google_ads_enabled: false
+  pinterest_schema: pinterest_ads
+  pinterest_database: tsm_emea 
+  twitter_ads_schema: twitter_ads
+  twitter_ads_database: tsm_emea  
+  facebook_ads_schema: facebook_ads
+  facebook_ads_database: tsm_emea 
+  snapchat_schema: snapchat_ads
+  snapchat_database: tsm_emea 
 
 models:
   ad_reporting:
@@ -36,13 +44,6 @@ models:
   twitter_ads:
     enabled: true
   twitter_ads_source:
-    enabled: true
-  
-  facebook_ads:
-    enabled: true
-  facebook_ads_source:
-    enabled: true
-  facebook_ads_creative_history:
     enabled: true
   
   google_ads:
