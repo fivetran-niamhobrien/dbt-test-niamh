@@ -13,23 +13,10 @@ vars:
   ad_reporting__microsoft_ads_enabled: false
   ad_reporting__linkedin_ads_enabled: false
   ad_reporting__google_ads_enabled: false
-  pinterest_schema: pinterest_ads
-  pinterest_database: tsm_emea 
-  twitter_ads_schema: twitter_ads
-  twitter_ads_database: tsm_emea  
-  facebook_ads_schema: facebook_ads
-  facebook_ads_database: tsm_emea 
-  snapchat_schema: snapchat_ads
-  snapchat_database: tsm_emea 
 
 models:
   ad_reporting:
     +materialized: view
-  
-  pinterest:
-    enabled: true
-  pinterest_source:
-    enabled: true
   
   microsoft_ads:
     enabled: false
@@ -41,20 +28,10 @@ models:
   linkedin_source:
     enabled: false
   
-  twitter_ads:
-    enabled: true
-  twitter_ads_source:
-    enabled: true
-  
   google_ads:
     enabled: false
   google_ads_source:
     enabled: false
-
-  snapchat_ads:
-    enabled: true
-  snapchat_ads_source:
-    enabled: true
 
 # These configurations specify where dbt should look for different types of files.
 # The `source-paths` config, for example, states that models in this project can be
